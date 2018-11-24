@@ -130,6 +130,39 @@ var config = {
 			updateInterval: 10*60*1000
 			}
 		},
+		{
+			module: 'MMM-bergfex',
+			position: 'top_right', 
+			classes: 'small dimmed', 
+			config: {
+			    updateInterval: 30*60*1000,
+			    animationSpeed: 0,
+			    header: 'bergfex.at Snow Report',
+				skiareas: [
+						'Gerlos - Zillertal Arena',
+						'Hauser Kaibling / Schladming - Ski amade',
+						'Hochkar',
+						'Hochkönig / Maria Alm - Dienten - Mühlbach - Ski amade',
+						'Klippitztörl',
+						'Koralpe'
+					],
+				shortenArea: 20,
+				cssclassrow: 'normal',
+				cssclassheader: 'bright'				
+			}
+		},
+
+{
+		module: 'iFrame',
+		position: 'bottom_bar',	// This can be any of the regions.
+		config: {
+			// See 'Configuration options' for more information.
+				url: "https://meteo.search.ch/widget/Basel?days=1"
+				width: "100%" // Optional. Default: 100%
+				height: "100px" //Optional. Default: 100px
+			}
+		}
+
 ]
 
 
