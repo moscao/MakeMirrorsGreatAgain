@@ -10,10 +10,10 @@ Module.register('MMM-bergfex', {
   defaults: {
     updateInterval: 30 * 60 * 1000,
     animationSpeed: 0,
-	header: 'Bergfex.at',
+	header: 'Bergfex.ch',
 	skiareas: [
-			'Hauser Kaibling / Schladming - Ski amade',
-			'Hochkar',
+			'Adelboden',
+			'Davos Klosters Parsenn',
 		],
 	shortenArea: 20,
 	cssclassrow: 'light',
