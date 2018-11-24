@@ -27,6 +27,36 @@ var config = {
 
 	modules: [
 		{
+			module: 'MMM-iFrameReload',
+			position: 'bottom_left', // This can be any of the regions.
+			config: {
+			// See 'Configuration options' for more information.
+			url: "https://www.rockstarjobs.ch/gmaps-zurich.html",
+			width: "300px", // Optional. Default: 100%
+			height: "410px", //Optional. Default: 100px
+			}
+		},
+                {
+                        module: 'MMM-iFrameReload',
+                        position: 'bottom_center', // This can be any of the regions.
+                        config: {
+                        // See 'Configuration options' for more information.
+                        url: "https://www.rockstarjobs.ch/uber.html",
+                        width: "300px", // Optional. Default: 100%
+                        height: "410px", //Optional. Default: 100px
+                        }
+                },
+                {
+                        module: 'MMM-iFrameReload',
+                        position: 'bottom_right', // This can be any of the regions.
+                        config: {
+                        // See 'Configuration options' for more information.
+                        url: "https://www.rockstarjobs.ch/mobility.html",
+                        width: "300px", // Optional. Default: 100%
+                        height: "410px", //Optional. Default: 100px                        
+			}
+                }, 
+		{
 			module: "alert",
 		},
 		{
@@ -37,110 +67,21 @@ var config = {
 			module: "clock",
 			position: "top_left"
 		},
+                {
+                        module: "travelslogans",
+                        position: "upper_third"
+                },
 		{
 			module: 'MMM-SwissCommute',
-			position: 'bottom_right',
-			header: 'Trains',
+			position: 'middle_center',
+			header: 'Next trains to Zurich',
 			config: {
-				from: 'Basel SBB', // Start train station
-				to: 'Zurich HB', // Destination station
-				maximumEntries: 6, // Max departures displayed
-				minWalkingTime: 15 // Minimum time to get to the station
+				from: 'Zuerich, Schmiede Wiedikon', // Start train station
+				to: 'Zuerich, Sonneggstrasse', // Destination station
+				maximumEntries: 4, // Max departures displayed
+				minWalkingTime: 5 // Minimum time to get to the station
 			}
-		},
-		//{
-		//	module: "calendar",
-		//	header: "US Holidays",
-		//	position: "top_left",
-		//	config: {
-		//		calendars: [
-		//			{
-		//				symbol: "calendar-check-o ",
-		//				url: "webcal://www.calendarlabs.com/templates/ical/US-Holidays.ics"
-		//			}
-		//		]
-		//	}
-		//},
-		{
-			module: 'calendar_monthly',
-			position: 'top_left',
-			config: {
-						// The config property is optional
-						// Without a config, a default month view is shown
-						// Please see the 'Configuration Options' section for more information
-				}
-		},
-
-		{
-			module: "compliments",
-			position: "lower_third"
-		},
-		{
-			module: "currentweather",
-			position: "top_right",
-			config: {
-				location: "New York",
-				locationID: "",  //ID from http://www.openweathermap.org/help/city_list.txt
-				appid: "YOUR_OPENWEATHER_API_KEY"
-			}
-		},
-		{
-			module: "weatherforecast",
-			position: "top_right",
-			header: "Weather Forecast",
-			config: {
-				location: "New York",
-				locationID: "5128581",  //ID from http://www.openweathermap.org/help/city_list.txt
-				appid: "YOUR_OPENWEATHER_API_KEY"
-			}
-		},
-		{
-			module: "newsfeed",
-			position: "bottom_bar",
-			config: {
-				feeds: [
-					{
-						title: "New York Times",
-						url: "http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml"
-					}
-				],
-				showSourceTitle: true,
-				showPublishDate: true
-			}
-		},
-       		{
-            		module: 'MMM-CoinMarketCap',
-           		 position: "top_right",  header: "Cryptocurrencies",
-           		 config: {
-                		currencies: ['bitcoin', 'ethereum', 'litecoin', 'ripple','electroneum'],
-               			view: 'graphWithChanges',
-               		 	conversion: 'CHF',
-
-                // See below for more Configuration Options
-            		}
-        	},
-		{
-    			module:     'MMM-3Day-Forecast',
-    			position:   'top_left',
-			config: {
-			api_key:    '6f7a480425e041019635d6061258eb97',
-			lat:        47.3769,
-			lon:        8.5417,
-			units:      'M',
-			lang:       'en',
-			interval:   900000
-			}
-		},
-		{
-			module: 'MMM-Globe',
-			position: 'center',
-			config: {
-				style: 'geoColor',
-			imageSize: 600,
-			ownImagePath:'',
-			updateInterval: 10*60*1000
-			}
-		},
+		}
 ]
 
 
