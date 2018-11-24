@@ -15,7 +15,7 @@ const request = require('request');
 const cheerio = require("cheerio");
 
 // Constants
-const URL = "http://www.bergfex.ch/schweiz/schneewerte/";
+const URL = "https://www.bergfex.ch/schweiz/schneewerte/";
 
 module.exports = NodeHelper.create({
 
