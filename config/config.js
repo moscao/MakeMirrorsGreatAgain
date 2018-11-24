@@ -37,6 +37,17 @@ var config = {
 			module: "clock",
 			position: "top_left"
 		},
+		{
+			module: 'MMM-SwissCommute',
+			position: 'bottom_right',
+			header: 'Trains',
+			config: {
+				from: 'Basel SBB', // Start train station
+				to: 'Zurich HB', // Destination station
+				maximumEntries: 6, // Max departures displayed
+				minWalkingTime: 15 // Minimum time to get to the station
+			}
+		},
 		//{
 		//	module: "calendar",
 		//	header: "US Holidays",
