@@ -27,6 +27,36 @@ var config = {
 
 	modules: [
 		{
+			module: 'MMM-iFrameReload',
+			position: 'bottom_left', // This can be any of the regions.
+			config: {
+			// See 'Configuration options' for more information.
+			url: "https://www.rockstarjobs.ch/gmaps-zurich.html",
+			width: "300px", // Optional. Default: 100%
+			height: "410px", //Optional. Default: 100px
+			}
+		},
+                {
+                        module: 'MMM-iFrameReload',
+                        position: 'bottom_center', // This can be any of the regions.
+                        config: {
+                        // See 'Configuration options' for more information.
+                        url: "https://www.rockstarjobs.ch/uber.html",
+                        width: "300px", // Optional. Default: 100%
+                        height: "410px", //Optional. Default: 100px
+                        }
+                },
+                {
+                        module: 'MMM-iFrameReload',
+                        position: 'bottom_right', // This can be any of the regions.
+                        config: {
+                        // See 'Configuration options' for more information.
+                        url: "https://www.rockstarjobs.ch/mobility.html",
+                        width: "300px", // Optional. Default: 100%
+                        height: "410px", //Optional. Default: 100px                        
+			}
+                }, 
+		{
 			module: "alert",
 		},
 		{
@@ -37,132 +67,22 @@ var config = {
 			module: "clock",
 			position: "top_left"
 		},
-		//{
-		//	module: "calendar",
-		//	header: "US Holidays",
-		//	position: "top_left",
-		//	config: {
-		//		calendars: [
-		//			{
-		//				symbol: "calendar-check-o ",
-		//				url: "webcal://www.calendarlabs.com/templates/ical/US-Holidays.ics"
-		//			}
-		//		]
-		//	}
-		//},
+                {
+                        module: "travelslogans",
+                        position: "upper_third"
+                },
 		{
-			module: 'calendar_monthly',
-			position: 'top_left',
+			module: 'MMM-SwissCommute',
+			position: 'middle_center',
+			header: 'Next trains to Work',
 			config: {
-						// The config property is optional
-						// Without a config, a default month view is shown
-						// Please see the 'Configuration Options' section for more information
-				}
-		},
+				from: 'Zuerich, Schmiede Wiedikon', // Start train station
+				to: 'Zuerich, Sonneggstrasse', // Destination station
+				maximumEntries: 5, // Max departures displayed
+				minWalkingTime: 5 // Minimum time to get to the station
+			}
 
-		{
-			module: "compliments",
-			position: "lower_third"
-		},
-		{
-			module: "currentweather",
-			position: "top_right",
-			config: {
-				location: "New York",
-				locationID: "",  //ID from http://www.openweathermap.org/help/city_list.txt
-				appid: "YOUR_OPENWEATHER_API_KEY"
-			}
-		},
-		{
-			module: "weatherforecast",
-			position: "top_right",
-			header: "Weather Forecast",
-			config: {
-				location: "New York",
-				locationID: "5128581",  //ID from http://www.openweathermap.org/help/city_list.txt
-				appid: "YOUR_OPENWEATHER_API_KEY"
-			}
-		},
-		{
-			module: "newsfeed",
-			position: "bottom_bar",
-			config: {
-				feeds: [
-					{
-						title: "New York Times",
-						url: "http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml"
-					}
-				],
-				showSourceTitle: true,
-				showPublishDate: true
-			}
-		},
-       		{
-            		module: 'MMM-CoinMarketCap',
-           		 position: "top_right",  header: "Cryptocurrencies",
-           		 config: {
-                		currencies: ['bitcoin', 'ethereum', 'litecoin', 'ripple','electroneum'],
-               			view: 'graphWithChanges',
-               		 	conversion: 'CHF',
-
-                // See below for more Configuration Options
-            		}
-        	},
-		{
-    			module:     'MMM-3Day-Forecast',
-    			position:   'top_left',
-			config: {
-			api_key:    '6f7a480425e041019635d6061258eb97',
-			lat:        47.3769,
-			lon:        8.5417,
-			units:      'M',
-			lang:       'en',
-			interval:   900000
-			}
-		},
-		{
-			module: 'MMM-Globe',
-			position: 'center',
-			config: {
-				style: 'geoColor',
-			imageSize: 600,
-			ownImagePath:'',
-			updateInterval: 10*60*1000
-			}
-		},
-		{
-			module: 'MMM-bergfex',
-			position: 'top_right', 
-			classes: 'small dimmed', 
-			config: {
-			    updateInterval: 30*60*1000,
-			    animationSpeed: 0,
-			    header: 'bergfex.at Snow Report',
-				skiareas: [
-						'Gerlos - Zillertal Arena',
-						'Hauser Kaibling / Schladming - Ski amade',
-						'Hochkar',
-						'Hochkönig / Maria Alm - Dienten - Mühlbach - Ski amade',
-						'Klippitztörl',
-						'Koralpe'
-					],
-				shortenArea: 20,
-				cssclassrow: 'normal',
-				cssclassheader: 'bright'				
-			}
-		},
-
-{
-		module: 'iFrame',
-		position: 'bottom_bar',	// This can be any of the regions.
-		config: {
-			// See 'Configuration options' for more information.
-				url: "https://meteo.search.ch/widget/Basel?days=1"
-				width: "100%" // Optional. Default: 100%
-				height: "100px" //Optional. Default: 100px
-			}
 		}
-
 ]
 
 

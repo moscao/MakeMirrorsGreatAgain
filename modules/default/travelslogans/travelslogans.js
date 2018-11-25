@@ -6,38 +6,28 @@
  * By Michael Teeuw http://michaelteeuw.nl
  * MIT Licensed.
  */
-Module.register("compliments", {
+Module.register("travelslogans", {
 
 	// Module config defaults.
 	defaults: {
 		compliments: {
                         anytime: [
-                                "Hallo!",
-                                "Du siehst super aus!"                                                           
+                                "Wo willst Du heute hinfahren?!",
+                                "Wie moechtest Du reisen?"                                                           
                         ],
                         morning: [
-                                "Good morning!",
-                                "Enjoy your day!",
-                                "How was your sleep?",
-                                "Gruezi!",
-                                "Habe einen grossartigen Tag!",
-                                "Gruete Morge!",
-                                "Wie hast Du geschlafen?",
-                                "Morgenstund hat Gold im Mund",
-                                "Was wirst Du heute erleben?",
-                                "Good morning!",
-                                "Einen wunderschönen guten Morgen!"
+                                "Musst Du schnell ins Buero?",
+                                "Soll ich Dir ein Uber rufen?",
+                                "Dein naechster Termin ist in 32 Min",
+                                "Du hast leider keine Zeit mehr zum Fruehstueck"
                         ],
                         afternoon: [
-                                "Hallo!",
-                                "Einen guten Mittag!",
-                                "Looking good today!",
+                                "Willkommen daheim. Wo willst Du hin?",
+                                "Wo moechtest Du heute abend sein?"
                         ],
                         evening: [
-                                "Wow, you look hot!",
-                                "You look nice!",
-                                "Guten Abend!",
-                                "Einen wunderschoenen Abend!"
+                                "Wo moechtest Du abendessen?",
+                                "Soll ich ein Restaurant reservieren?",
                         ]
 		},
 		updateInterval: 20000,

@@ -12,3 +12,11 @@
  body {
  	
  }
+
+.MMM-SwissCommute{
+  color: red;
+  font-size: 75px;
+  line-height: 75px; 
+  top: 40%;
+  position : absolute; 
+}
