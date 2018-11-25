@@ -74,11 +74,11 @@ var config = {
 		{
 			module: 'MMM-SwissCommute',
 			position: 'middle_center',
-			header: 'Next trains to Zurich',
+			header: 'Next trains to Work',
 			config: {
 				from: 'Zuerich, Schmiede Wiedikon', // Start train station
 				to: 'Zuerich, Sonneggstrasse', // Destination station
-				maximumEntries: 4, // Max departures displayed
+				maximumEntries: 5, // Max departures displayed
 				minWalkingTime: 5 // Minimum time to get to the station
 			}
 		}
