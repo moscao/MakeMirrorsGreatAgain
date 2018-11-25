@@ -24,38 +24,7 @@ var config = {
 	language: "en",
 	timeFormat: 24,
 	units: "metric",
-
 	modules: [
-		{
-			module: 'MMM-iFrameReload',
-			position: 'bottom_left', // This can be any of the regions.
-			config: {
-			// See 'Configuration options' for more information.
-			url: "https://www.rockstarjobs.ch/gmaps-zurich.html",
-			width: "300px", // Optional. Default: 100%
-			height: "410px", //Optional. Default: 100px
-			}
-		},
-                {
-                        module: 'MMM-iFrameReload',
-                        position: 'bottom_center', // This can be any of the regions.
-                        config: {
-                        // See 'Configuration options' for more information.
-                        url: "https://www.rockstarjobs.ch/uber.html",
-                        width: "300px", // Optional. Default: 100%
-                        height: "410px", //Optional. Default: 100px
-                        }
-                },
-                {
-                        module: 'MMM-iFrameReload',
-                        position: 'bottom_right', // This can be any of the regions.
-                        config: {
-                        // See 'Configuration options' for more information.
-                        url: "https://www.rockstarjobs.ch/mobility.html",
-                        width: "300px", // Optional. Default: 100%
-                        height: "410px", //Optional. Default: 100px                        
-			}
-                }, 
 		{
 			module: "alert",
 		},
@@ -67,22 +36,36 @@ var config = {
 			module: "clock",
 			position: "top_left"
 		},
-                {
-                        module: "travelslogans",
-                        position: "upper_third"
-                },
 		{
-			module: 'MMM-SwissCommute',
-			position: 'middle_center',
-			header: 'Next trains to Work',
+			module: 'MMM-iFrameReload',
+			position: 'upper_third', // This can be any of the regions.
 			config: {
-				from: 'Zuerich, Schmiede Wiedikon', // Start train station
-				to: 'Zuerich, Sonneggstrasse', // Destination station
-				maximumEntries: 5, // Max departures displayed
-				minWalkingTime: 5 // Minimum time to get to the station
+			url: "https://www.rockstarjobs.ch/tvfeed.html",
+			width: "680px", // Optional. Default: 100%
+			height: "580px" //Optional. Default: 100px
 			}
-		}
-]
+		},
+                {
+                        module: "MMM-Reddit",
+                        position: "lower_third",
+                        config: {
+                                subreddit: ['worldnews','switzerland'],
+                                headerType: 'chained',
+                                showNumComments : false,
+                                displayType: 'headlines',
+                                count: 24,
+                                show: 8,
+				width: 950,
+                                showScore: false,
+                                showHeader: true,
+                                characterLimit: 62,
+                                showSubreddit: false,
+                                showGilded: false,
+                                colorText: true,
+                                showThumbnail: false,
+                        }
+                }
+		]
 
 
 };
